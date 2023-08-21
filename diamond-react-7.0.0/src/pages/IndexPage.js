@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 import axios from "axios";
+import banner from "../assets/banner.jpg";
+import Carousel from "react-bootstrap/Carousel";
 
 const IndexPage = () => {
     const [data, setData] = useState([]);
@@ -86,26 +88,33 @@ const IndexPage = () => {
                             </DataTable>
                         </div>
                     </div>
-                    <div className="jumbotron jumbotron-fluid">
-                        <div className="logo-container">
-                            <div className="logo"></div>
-                        </div>
-                        <div className="container">
-                            <h1 className="display-5">Hello! I'm George Marco Alvin</h1>
-                            <h1 className="display-5 thin mt-auto">Consult, Design, and Develop Websites</h1>
-                            <p className="small text-center text-light">
-                                Have something great in mind? Feel free to contact me.
-                                <br />
-                                I'll help you to make it happen.
-                                <br />
-                            </p>
-                            <p className="text-center">
-                                <button className="button2 btn-outline-light btn-sm text-uppercase" id="whatsapp" href="#" role="button">
-                                    Let's Make Contact
-                                </button>
-                            </p>
-                        </div>
-                    </div>
+                    <Carousel interval={10000} controls={false} indicators={false}>
+                        <Carousel.Item>
+                            <div className="jumbotron jumbotron-fluid">
+                                <div className="logo-container">
+                                    <div className="logo"></div>
+                                </div>
+                                <div className="container">
+                                    <h1 className="display-5">Hello! I'm George Marco Alvin</h1>
+                                    <h1 className="display-5 thin mt-auto">Consult, Design, and Develop Websites</h1>
+                                    <p className="small text-center text-light">
+                                        Have something great in mind? Feel free to contact me.
+                                        <br />
+                                        I'll help you to make it happen.
+                                        <br />
+                                    </p>
+                                    <p className="text-center">
+                                        <button className="button2 btn-outline-light btn-sm text-uppercase" id="whatsapp" href="#" role="button">
+                                            Let's Make Contact
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img src={banner} className="d-block w-100" alt="banner" height={520} />
+                        </Carousel.Item>
+                    </Carousel>
                     <main role="main">
                         <div className="custom-container">
                             <div className="grid">

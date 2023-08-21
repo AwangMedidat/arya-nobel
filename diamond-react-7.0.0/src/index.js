@@ -3,6 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter } from 'react-router-dom'
 import AppWrapper from './AppWrapper';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 //import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
